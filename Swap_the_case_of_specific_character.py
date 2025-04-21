@@ -8,4 +8,4 @@ Print the string after swapping the case of all characters that follow 'z'.
 */
 
   str=input(
-  print(str[0:str.find('z')+1]+str[str.find('z')+1].swapcase())
+  print(str[0:str.find('z')+1]+str[str.find('z')+1:].swapcase())
