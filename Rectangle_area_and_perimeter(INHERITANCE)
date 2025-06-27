@@ -1,0 +1,34 @@
+/*13)  You are assigned to develop a basic geometry application that calculates the area and perimeter of shapes, specifically a rectangle. Follow the instructions below to implement the required functionality:
+
+Define a base class Shape with a constructor that takes two parameters, representing the dimensions of the shape (length and width), implement a method named calculateArea in the Shape class that calculates the area of a rectangle using the formula:
+Area=length*width
+Create a child class named Rectangle that inherits from the Shape class. In the Rectangle class, implement a method named calculatePerimeter that calculates and returns the perimeter of the rectangle. The perimeter of a rectangle is calculated using the formula:
+perimeter=2*(length+width)
+
+Input Format:
+Two integers, each on a new line, representing the length and width of the rectangle.
+
+Output Format:
+The first line is the integer representing the area of the rectangle.
+The second line is the integer representing the perimeter of the rectangle.
+*/
+
+
+class Shape:
+  def __init__(self,length,width):
+    self.length=length
+    self.width=width
+  def calculateArea(self):
+    return self.length*self.width
+class Rectangle(Shape):
+  def calculatePerimeter(self):
+    return 2*(self.length+self.width)
+
+if __name__=="__main__":
+  length=int(input())
+  width=int(input())
+  rectangle=Rectangle(length,width)
+  area=rectangle.calculateArea()
+  perimeter=rectangle.calculatePerimeter()
+  print(area)
+  print(perimeter)
